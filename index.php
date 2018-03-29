@@ -1,107 +1,95 @@
 <?php
 class Car
 {
-	public $CarModel;
-	public $CarColor;
-	public $CarPrice;
-	public function getCarPrice()
-	{
-		if($this->CarColor == 'Exclusive'){
-			return $this->CarPrice + 100000;
-		} else {
-			return $this->CarPrice;
-		}
+  public $CarModel;
+  public $CarColor;
+  public $CarPrice;
+  public function getCarPrice() {
+      if ($this->CarColor == 'Exclusive') {
+	return $this->CarPrice + 100000;
+	} else {
+	    return $this->CarPrice;
 	}
-	public function __construct($CarModel, $CarColor, $CarPrice)
-    {
-        $this->CarModel = $CarModel;
-		$this->CarColor = $CarColor;
-        $this->CarPrice = $CarPrice; 
-    }
+  }
+  public function __construct($CarModel, $CarColor, $CarPrice) {
+    $this->CarModel = $CarModel;
+    $this->CarColor = $CarColor;
+    $this->CarPrice = $CarPrice; 
+  }
 }
 
 class Tv
 {
-	public $TvModel;
-	public $TvSize;
-	public $TvPrice;
-	public function getTvPrice(){
-		if($this->TvSize <= 55){
-			return $this->TvPrice + 500;
-		} else {
-			echo "<i>Бесплатная доставка</i>"; 
-		}
-	}
-	public function __construct($TvModel, $TvSize, $TvPrice)
-	{
-		$this->TvModel = $TvModel;
-		$this->TvSize = $TvSize;
-		$this->TvPrice = $TvPrice;	
-	}
+  public $TvModel;
+  public $TvSize;
+  public $TvPrice;
+  public function getTvPrice() {
+    if($this->TvSize <= 55){
+      return $this->TvPrice + 500;
+    }else {
+       echo "<i>Бесплатная доставка</i>"; 
+    }
+  }
+  public function __construct($TvModel, $TvSize, $TvPrice) {
+    $this->TvModel = $TvModel;
+    $this->TvSize = $TvSize;
+    $this->TvPrice = $TvPrice;	
+  }
 }
 
 class Pen
 {
-    public $penColor;
-    public $inkColor;
-    public $penPrice;
-    public function getPenPrice()
-    {
-		if($this->inkColor == 'black' || $this->inkColor == 'dark-blue'){
-        return $this->penPrice;
-		} else {
-			return 'Такие ручки бесценны, так что закатай губу';
-		}
+  public $penColor;
+  public $inkColor;
+  public $penPrice;
+  public function getPenPrice() {
+    if($this->inkColor == 'black' || $this->inkColor == 'dark-blue') {
+      return $this->penPrice;
+    }else {
+      return 'Такие ручки бесценны, так что закатай губу';
     }
-	public function __construct($penColor, $inkColor, $penPrice)
-    {
-        $this->penPrice = $penPrice;
-        $this->penColor = $penColor;
-		$this->inkColor = $inkColor;
-    }
+  }
+  public function __construct($penColor, $inkColor, $penPrice) {
+    $this->penPrice = $penPrice;
+    $this->penColor = $penColor;
+    $this->inkColor = $inkColor;
+  }
 }
 
 class Duck
 {
-   public $place;
-   public $breed;
-   public function getBreed()
-   {
-	   if($this->place){
-		   return $this->breed;
-	   }else {
-		   return 'такой породы нет в базе';
-	   }
-	   
-   }
-   public function __construct($place, $breed)
-    {
-        $this->place = $place;
-        $this->breed = $breed;
-	}
+  public $place;
+  public $breed;
+  public function getBreed() {
+    if($this->place){
+      return $this->breed;
+    }else {
+      return 'такой породы нет в базе';
+    }   
+  }
+  public function __construct($place, $breed) {
+    $this->place = $place;
+    $this->breed = $breed;
+  }
 }
 
 class Product
 {
-	public $name;
-	private $price;
-    public $discount;
-    public function getPrice()
-	{
-		if($this->discount){
-        return $this->price * (1 - ($this->discount / 100));
-		} else{
-			return $this->price;
-		}
+  public $name;
+  private $price;
+  public $discount;
+  public function getPrice() {
+    if($this->discount) {
+      return $this->price * (1 - ($this->discount / 100));
+    }else{
+      return $this->price;
     }
-	public function __construct($name, $price, $discount)
-    {
-        $this->price = $price;
-        $this->name = $name;
-		$this->discount = $discount;
-    }
-	
-	
+  }
+  public function __construct($name, $price, $discount) {
+    $this->price = $price;
+    $this->name = $name;
+    $this->discount = $discount;
+  }	
 }
  
 $audi= new Car('Audi', 'Exclusive', 2000000);
