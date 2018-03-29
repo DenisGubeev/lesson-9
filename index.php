@@ -93,7 +93,7 @@ class Product
 }
  
 $audi= new Car('Audi', 'Exclusive', 2000000);
-$toyota= new Car('Toyota', 'Red' , 1000000);
+$toyota= new Car('Toyota', 'Red', 1000000);
  
 $sony = new Tv('Sony', 61, 75000);
 $lg = new Tv('LG', 35, 35000);
